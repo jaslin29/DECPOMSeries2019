@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="6" passed="4">
+<testng-results skipped="0" failed="4" total="12" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Hub Spot Suite" duration-ms="78483" started-at="2020-05-24T16:36:42Z" finished-at="2020-05-24T16:38:01Z">
+  <suite name="Hub Spot Suite" duration-ms="138416" started-at="2020-06-11T16:27:05Z" finished-at="2020-06-11T16:29:23Z">
     <groups>
       <group name="sanity">
-        <method signature="LoginPageTest.verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@62417a16]" name="verifySignUpLinkTest" class="com.qa.hubspot.tests.LoginPageTest"/>
-        <method signature="LoginPageTest.verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@67427b69]" name="verifySignUpLinkTest" class="com.qa.hubspot.tests.LoginPageTest"/>
+        <method signature="HomePageTest.verifyHomePageTitleTest()[pri:1, instance:com.qa.hubspot.tests.HomePageTest@759fad4]" name="verifyHomePageTitleTest" class="com.qa.hubspot.tests.HomePageTest"/>
+        <method signature="LoginPageTest.verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@6ea1bcdc]" name="verifySignUpLinkTest" class="com.qa.hubspot.tests.LoginPageTest"/>
+        <method signature="HomePageTest.verifyHomePageTitleTest()[pri:1, instance:com.qa.hubspot.tests.HomePageTest@58c540cf]" name="verifyHomePageTitleTest" class="com.qa.hubspot.tests.HomePageTest"/>
+        <method signature="LoginPageTest.verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@1095f122]" name="verifySignUpLinkTest" class="com.qa.hubspot.tests.LoginPageTest"/>
       </group> <!-- sanity -->
     </groups>
-    <test name="Hub Spot Functional Regression Test - chrome" duration-ms="56110" started-at="2020-05-24T16:36:42Z" finished-at="2020-05-24T16:37:38Z">
+    <test name="Hub Spot Functional Regression Test - chrome" duration-ms="89633" started-at="2020-06-11T16:27:05Z" finished-at="2020-06-11T16:28:34Z">
       <class name="com.qa.hubspot.tests.LoginPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@67427b69]" name="setup" is-config="true" duration-ms="19612" started-at="2020-05-24T22:06:43Z" finished-at="2020-05-24T22:07:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@67427b69]" name="verifyLoginPageTitleTest" duration-ms="4368" started-at="2020-05-24T22:07:03Z" description="verify login page title test........!!!!!" finished-at="2020-05-24T22:07:07Z">
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@1095f122]" name="verifyLoginPageTitleTest" duration-ms="20654" started-at="2020-06-11T21:58:01Z" description="verify login page title test........!!!!!" finished-at="2020-06-11T21:58:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageTitleTest -->
-        <test-method status="FAIL" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@67427b69]" name="verifySignUpLinkTest" duration-ms="20186" started-at="2020-05-24T22:07:07Z" finished-at="2020-05-24T22:07:27Z">
+        <test-method status="FAIL" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@1095f122]" name="verifySignUpLinkTest" duration-ms="20378" started-at="2020-06-11T21:58:01Z" finished-at="2020-06-11T21:58:22Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.linkText: Sign up1111 (tried for 20 second(s) with 500 milliseconds interval)]]>
@@ -36,7 +27,7 @@
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at com.qa.hubspot.util.ElementUtil.waitForElementVisible(ElementUtil.java:38)
-	at com.qa.hubspot.page.LoginPage.checkSignUpLink(LoginPage.java:51)
+	at com.qa.hubspot.page.LoginPage.checkSignUpLink(LoginPage.java:57)
 	at com.qa.hubspot.tests.LoginPageTest.verifySignUpLinkTest(LoginPageTest.java:77)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -52,13 +43,13 @@
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Sign up1111"}
-  (Session info: chrome=83.0.4103.61)
+  (Session info: chrome=83.0.4103.97)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-EPJ64RFC', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.61, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\JASLIN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52697}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 425fc965dbff7caa69c8a89d9955ad0b
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.97, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\JASLIN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64821}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 7d7a45291b2124da76c5f26e89e23e7a
 *** Element info: {Using=link text, value=Sign up1111}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -84,34 +75,85 @@ Session ID: 425fc965dbff7caa69c8a89d9955ad0b
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignUpLinkTest -->
-        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@67427b69]" name="loginTest" duration-ms="9322" started-at="2020-05-24T22:07:28Z" finished-at="2020-05-24T22:07:37Z">
+        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@1095f122]" name="loginTest" duration-ms="9554" started-at="2020-06-11T21:58:21Z" finished-at="2020-06-11T21:58:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@67427b69]" name="tearDown" is-config="true" duration-ms="1078" started-at="2020-05-24T22:07:37Z" finished-at="2020-05-24T22:07:38Z">
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+      <class name="com.qa.hubspot.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@58c540cf]" name="setUp" is-config="true" duration-ms="37722" started-at="2020-06-11T21:57:06Z" finished-at="2020-06-11T21:57:43Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
-    </test> <!-- Hub Spot Functional Regression Test - chrome -->
-    <test name="Hub Spot Functional Regression Test - FF" duration-ms="78483" started-at="2020-05-24T16:36:42Z" finished-at="2020-05-24T16:38:01Z">
-      <class name="com.qa.hubspot.tests.LoginPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@62417a16]" name="setup" is-config="true" duration-ms="39499" started-at="2020-05-24T22:06:43Z" finished-at="2020-05-24T22:07:22Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@1095f122]" name="setup" is-config="true" duration-ms="16933" started-at="2020-06-11T21:57:43Z" finished-at="2020-06-11T21:58:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[firefox]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@62417a16]" name="verifyLoginPageTitleTest" duration-ms="4683" started-at="2020-05-24T22:07:22Z" description="verify login page title test........!!!!!" finished-at="2020-05-24T22:07:27Z">
+        <test-method status="PASS" signature="verifyHomePageTitleTest()[pri:1, instance:com.qa.hubspot.tests.HomePageTest@58c540cf]" name="verifyHomePageTitleTest" duration-ms="526" started-at="2020-06-11T21:58:01Z" finished-at="2020-06-11T21:58:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitleTest -->
+        <test-method status="FAIL" signature="verifyHomePageHeaderTest()[pri:2, instance:com.qa.hubspot.tests.HomePageTest@58c540cf]" name="verifyHomePageHeaderTest" duration-ms="20401" started-at="2020-06-11T21:58:01Z" finished-at="2020-06-11T21:58:22Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Sales Dashboard] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Sales Dashboard] but found [null]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:130)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.qa.hubspot.tests.HomePageTest.verifyHomePageHeaderTest(HomePageTest.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageHeaderTest -->
+        <test-method status="PASS" signature="verifyHomePageAddReportTest()[pri:3, instance:com.qa.hubspot.tests.HomePageTest@58c540cf]" name="verifyHomePageAddReportTest" duration-ms="1286" started-at="2020-06-11T21:58:22Z" finished-at="2020-06-11T21:58:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageAddReportTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@58c540cf]" name="tearDown" is-config="true" duration-ms="2249" started-at="2020-06-11T21:58:31Z" finished-at="2020-06-11T21:58:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@1095f122]" name="tearDown" is-config="true" duration-ms="1391" started-at="2020-06-11T21:58:33Z" finished-at="2020-06-11T21:58:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
+    </test> <!-- Hub Spot Functional Regression Test - chrome -->
+    <test name="Hub Spot Functional Regression Test - FF" duration-ms="138416" started-at="2020-06-11T16:27:05Z" finished-at="2020-06-11T16:29:23Z">
+      <class name="com.qa.hubspot.tests.LoginPageTest">
+        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.hubspot.tests.LoginPageTest@6ea1bcdc]" name="verifyLoginPageTitleTest" duration-ms="20321" started-at="2020-06-11T21:58:47Z" description="verify login page title test........!!!!!" finished-at="2020-06-11T21:59:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginPageTitleTest -->
-        <test-method status="FAIL" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@62417a16]" name="verifySignUpLinkTest" duration-ms="20072" started-at="2020-05-24T22:07:27Z" finished-at="2020-05-24T22:07:47Z">
+        <test-method status="FAIL" signature="verifySignUpLinkTest()[pri:2, instance:com.qa.hubspot.tests.LoginPageTest@6ea1bcdc]" name="verifySignUpLinkTest" duration-ms="20262" started-at="2020-06-11T21:58:47Z" finished-at="2020-06-11T21:59:07Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of element located by By.linkText: Sign up1111 (tried for 20 second(s) with 500 milliseconds interval)]]>
@@ -121,7 +163,7 @@ Session ID: 425fc965dbff7caa69c8a89d9955ad0b
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at com.qa.hubspot.util.ElementUtil.waitForElementVisible(ElementUtil.java:38)
-	at com.qa.hubspot.page.LoginPage.checkSignUpLink(LoginPage.java:51)
+	at com.qa.hubspot.page.LoginPage.checkSignUpLink(LoginPage.java:57)
 	at com.qa.hubspot.tests.LoginPageTest.verifySignUpLinkTest(LoginPageTest.java:77)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -141,8 +183,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-EPJ64RFC', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 75.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200403170909, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 6836, moz:profile: C:\Users\Jaslin Kaur\AppDat..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fe81236e-987a-4690-b82a-ed21b156a8d5
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 75.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200403170909, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 8056, moz:profile: C:\Users\Jaslin Kaur\AppDat..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 573687d9-dff7-409d-b0f6-f927497166a9
 *** Element info: {Using=link text, value=Sign up1111}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -168,15 +210,77 @@ Session ID: fe81236e-987a-4690-b82a-ed21b156a8d5
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignUpLinkTest -->
-        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@62417a16]" name="loginTest" duration-ms="5662" started-at="2020-05-24T22:07:47Z" finished-at="2020-05-24T22:07:53Z">
+        <test-method status="PASS" signature="loginTest()[pri:3, instance:com.qa.hubspot.tests.LoginPageTest@6ea1bcdc]" name="loginTest" duration-ms="6010" started-at="2020-06-11T21:59:07Z" finished-at="2020-06-11T21:59:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@62417a16]" name="tearDown" is-config="true" duration-ms="7680" started-at="2020-05-24T22:07:53Z" finished-at="2020-05-24T22:08:01Z">
+      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+      <class name="com.qa.hubspot.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@759fad4]" name="setUp" is-config="true" duration-ms="37441" started-at="2020-06-11T21:57:06Z" finished-at="2020-06-11T21:57:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@6ea1bcdc]" name="setup" is-config="true" duration-ms="63435" started-at="2020-06-11T21:57:43Z" finished-at="2020-06-11T21:58:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyHomePageTitleTest()[pri:1, instance:com.qa.hubspot.tests.HomePageTest@759fad4]" name="verifyHomePageTitleTest" duration-ms="36" started-at="2020-06-11T21:58:47Z" finished-at="2020-06-11T21:58:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitleTest -->
+        <test-method status="FAIL" signature="verifyHomePageHeaderTest()[pri:2, instance:com.qa.hubspot.tests.HomePageTest@759fad4]" name="verifyHomePageHeaderTest" duration-ms="20060" started-at="2020-06-11T21:58:47Z" finished-at="2020-06-11T21:59:07Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Sales Dashboard] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Sales Dashboard] but found [null]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:130)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.qa.hubspot.tests.HomePageTest.verifyHomePageHeaderTest(HomePageTest.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageHeaderTest -->
+        <test-method status="PASS" signature="verifyHomePageAddReportTest()[pri:3, instance:com.qa.hubspot.tests.HomePageTest@759fad4]" name="verifyHomePageAddReportTest" duration-ms="779" started-at="2020-06-11T21:59:07Z" finished-at="2020-06-11T21:59:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageAddReportTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.HomePageTest@759fad4]" name="tearDown" is-config="true" duration-ms="1069" started-at="2020-06-11T21:59:13Z" finished-at="2020-06-11T21:59:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.tests.LoginPageTest@6ea1bcdc]" name="tearDown" is-config="true" duration-ms="9537" started-at="2020-06-11T21:59:14Z" finished-at="2020-06-11T21:59:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
     </test> <!-- Hub Spot Functional Regression Test - FF -->
   </suite> <!-- Hub Spot Suite -->
 </testng-results>
