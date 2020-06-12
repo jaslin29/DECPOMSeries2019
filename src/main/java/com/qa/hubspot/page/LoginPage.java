@@ -11,6 +11,8 @@ import com.qa.hubspot.util.Credentials;
 import com.qa.hubspot.util.ElementUtil;
 import com.qa.hubspot.util.JavaScriptUtil;
 
+import io.qameta.allure.Step;
+
 
 public class LoginPage extends BasePage{
 	
@@ -36,22 +38,27 @@ public class LoginPage extends BasePage{
 	
 	// Page Actions
 	
+	
+
 	public String getPageTitle() {
 		//return driver.getTitle();
 		elementUtil.waitForTitlePresent(AppConstants.LOGIN_PAGE_TITLE);
 		return elementUtil.doGetPageTitle();
 	}
 	
+	
 	public String getPageTitleUsingJS() {
 		return jsUtil.getTitleJS();
 	}
 	
+
 	public boolean checkSignUpLink() {
 		//return driver.findElement(signUpLink).isDisplayed();
 		elementUtil.waitForElementVisible(signUpLink);
 		return elementUtil.doIsDisplayed(signUpLink);
 		
 	}
+	
 	
 	public boolean showPasswordLink() {
 		//return driver.findElement(showpassword).isDisplayed();
@@ -62,6 +69,7 @@ public class LoginPage extends BasePage{
 //		driver.findElement(emailId).sendKeys(username);
 //		driver.findElement(password).sendKeys(pwd);
 //		driver.findElement(loginButton).click();
+	
 	
 	public HomePage doLogin(Credentials userCred) {
 //		driver.findElement(emailId).sendKeys(username);
