@@ -38,19 +38,12 @@ public class LoginPageTest {
 	
 	
 	@BeforeTest(alwaysRun=true)
-	@Parameters(value= {"browser"})
-	public void setup(String browser) {
-		String browserName = null;
+	//@Parameters(value= {"browser"})
+	public void setup() {
+		//String browserName = null;
 		basePage = new BasePage();
 	    prop = basePage.init_properties();
-	   
-	   
-	   if(browser.equals(null))
-	   {
-		   browserName = prop.getProperty("browser");
-	   }else {
-		   browserName = browser;
-	   }
+	    String browserName = prop.getProperty("browser");
 	   driver = basePage.init_driver(browserName);
 	   driver.get(prop.getProperty("url"));  // launch the URL
 	   

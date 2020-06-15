@@ -12,7 +12,7 @@ public class HomePage extends BasePage{
 	WebDriver driver;
 	ElementUtil elementUtil;
 	
-	By header = By.cssSelector("h1.private-page__title");
+	By header = By.cssSelector("h1.dashboard-selector__title");
 	By accountName = By.cssSelector("span.account-name");
 	By headerReport = By.id("add-report");
 	By mainContactsLink = By.id("nav-primary-contacts-branch");
@@ -22,7 +22,7 @@ public class HomePage extends BasePage{
 		this.driver = driver;
 		elementUtil = new ElementUtil(driver);
 	}
-	
+	//<h1 class="dashboard-selector__title">Sales Dashboard</h1>
 	public String getHomePageHeader() {
 		//return driver.findElement(header).getText();
 		return elementUtil.doGetText(header);

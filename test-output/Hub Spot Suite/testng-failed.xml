@@ -1,54 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Hub Spot Suite]" parallel="tests">
-  <parameter name="browser" value="chrome"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Hub Spot Suite]">
   <listeners>
-    <listener class-name="com.qa.hubspot.listeners.TesultsListener"/>
+    <listener class-name="com.qa.hubspot.listeners.TestAllureListener"/>
   </listeners>
-  <test name="Hub Spot Functional Regression Test - chrome(failed)" parallel="methods">
-    <parameter name="browser" value="chrome"/>
+  <test name="Hub Spot Functional Regression Test(failed)">
     <classes>
-      <class name="com.qa.hubspot.tests.HomePageTest">
+      <class name="com.qa.hubspot.tests.ContactsPageTest">
         <methods>
+          <include name="createContactsTest"/>
           <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="verifyHomePageHeaderTest"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
-      <class name="com.qa.hubspot.tests.LoginPageTest">
-        <methods>
           <include name="setup"/>
-          <include name="setup"/>
-          <include name="verifySignUpLinkTest"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
+      </class> <!-- com.qa.hubspot.tests.ContactsPageTest -->
     </classes>
-  </test> <!-- Hub Spot Functional Regression Test - chrome(failed) -->
-  <test name="Hub Spot Functional Regression Test - FF(failed)" parallel="methods">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="com.qa.hubspot.tests.HomePageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="verifyHomePageHeaderTest"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.qa.hubspot.tests.HomePageTest -->
-      <class name="com.qa.hubspot.tests.LoginPageTest">
-        <methods>
-          <include name="setup"/>
-          <include name="setup"/>
-          <include name="verifySignUpLinkTest"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.hubspot.tests.LoginPageTest -->
-    </classes>
-  </test> <!-- Hub Spot Functional Regression Test - FF(failed) -->
+  </test> <!-- Hub Spot Functional Regression Test(failed) -->
 </suite> <!-- Failed suite [Hub Spot Suite] -->
